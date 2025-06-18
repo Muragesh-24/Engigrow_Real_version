@@ -1,12 +1,17 @@
 import Image from "next/image";
-
+import "./globals.css";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
+import MainHero from "../../Components/MainHero";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div>
 
-      <div className="bg-white h-20">
-        <h1 className="text-black m-4">Hello this is the Start of Engigrow</h1>
-      </div>
+<Navbar/>  
+
+<MainHero/>
+
+<Footer/>  
      
     </div>
   );
