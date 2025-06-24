@@ -1,37 +1,61 @@
 import React from 'react'
 import "../src/app/globals.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+
 function Navbar() {
   return (
-  
-      <div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+    <nav className="bg-white dark:bg-gray-900  px-2 h-[3rem] shadow-sm border-b flex items-center">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 w-full flex items-center justify-between">
+        <div className="text-xl font-bold text-white">EngiGrow</div>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-6 text-sm text-white font-medium">
+          <a href="/" className="hover:text-amber-100">Discussion</a>
+          <a href="/Collaboration" className="hover:text-amber-100">Collaboration</a>
+        <a href="/logout" className="hover:text-amber-100">Logout</a>
+        </div>
+        {/* Mobile Navigation */}
+        <DropdownMenu>
+          <DropdownMenuTrigger className="md:hidden p-2 ">
+            <div className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <FontAwesomeIcon icon={faBars} size="lg" className="text-gray-800 dark:text-white" />
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="md:hidden">
+            <DropdownMenuLabel>Menu</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <a href="/">Discussion</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="/Collaboration">Collaboration</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="/profile">My Profile</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="/viewed">Who Viewed My Profile</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="/settings">Settings</a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="/logout">Logout</a>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
-      </ul>
-    </div>
-  </div>
-  <div className="navbar-center">
-    <a className="btn btn-ghost text-xl">EngiGrow</a>
-  </div>
-  <div className="navbar-end">
-    
-    <button className="btn btn-ghost btn-circle">
-      <div className="indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /> </svg>
-        <span className="badge badge-xs badge-primary indicator-item"></span>
-      </div>
-    </button>
-  </div>
-</div>
-   
+    </nav>
   )
 }
 

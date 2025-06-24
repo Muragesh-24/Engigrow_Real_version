@@ -1,10 +1,10 @@
 import React from 'react'
-import "../src/app/globals.css"
-function MainHero() {
+
+function MainColab() {
   return (
-  <div className="hero bg-[#FFFFFF] dark:bg-[#1f2937] min-h-screen flex flex-col items-center p-2">
+    <div className="hero bg-[#FFFFFF] dark:bg-[#1f2937] min-h-screen flex flex-col items-center p-2">
  <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-4 mb-6 w-full ">
-  <h2 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Start a Discussion</h2>
+  <h2 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Start a Colaboration</h2>
   
   <form className="flex flex-col md:flex-row items-center gap-4">
 
@@ -37,4 +37,4 @@ function MainHero() {
   )
 }
 
-export default MainHero
+export default MainColab

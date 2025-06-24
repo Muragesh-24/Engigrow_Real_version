@@ -2,7 +2,7 @@ import React from 'react'
 import "../src/app/globals.css"
 function Footer() {
   return (
-   <footer className="footer sm:footer-horizontal bg-base-100 text-base-content p-10">
+   <footer className="footer sm:footer-horizontal bg-white dark:bg-gray-900 text-white p-10">
   <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Branding</a>
@@ -31,7 +31,7 @@ function Footer() {
         <input
           type="text"
           placeholder="username@site.com"
-          className="input input-bordered join-item" />
+          className="input input-bordered text-amber-50 join-item" />
         <button className="btn btn-primary join-item">Subscribe</button>
       </div>
     </fieldset>
