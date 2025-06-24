@@ -1,7 +1,7 @@
-import Footer from "../../Components/Footer";
-import Navbar from "../../Components/Navbar";
-import SideBar from "../../Components/Sidebar";
-import "./globals.css";
+import Footer from "../../../Components/Footer";
+import Navbar from "../../../Components/Navbar";
+import SideBar from "../../../Components/Sidebar";
+import "../globals.css";
 export const metadata = {
   title: "EngiGrow",
   description: "Connect Create Colaberate",

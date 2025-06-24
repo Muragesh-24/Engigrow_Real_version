@@ -20,9 +20,9 @@ function Navbar() {
         <div className="text-xl font-bold text-white">EngiGrow</div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 text-sm text-white font-medium">
-          <a href="/" className="hover:text-amber-100">Discussion</a>
-          <a href="/Collaboration" className="hover:text-amber-100">Collaboration</a>
-        <a href="/logout" className="hover:text-amber-100">Logout</a>
+          <a href="/dashboard" className="hover:text-amber-100">Discussion</a>
+          <a href="/dashboard/Collaboration" className="hover:text-amber-100">Collaboration</a>
+        <a href="/" className="hover:text-amber-100">Logout</a>
         </div>
         {/* Mobile Navigation */}
         <DropdownMenu>
@@ -35,22 +35,22 @@ function Navbar() {
             <DropdownMenuLabel>Menu</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <a href="/">Discussion</a>
+              <a href="/dashboard">Discussion</a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/Collaboration">Collaboration</a>
+              <a href="/dashboard/Collaboration">Collaboration</a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/profile">My Profile</a>
+              <a href="/dashboard/profile">My Profile</a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/viewed">Who Viewed My Profile</a>
+              <a href="/dashboard/viewed">Who Viewed My Profile</a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/settings">Settings</a>
+              <a href="/dashboard/settings">Settings</a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="/logout">Logout</a>
+              <a href="/">Logout</a>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

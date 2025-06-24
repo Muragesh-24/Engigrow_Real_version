@@ -1,6 +1,6 @@
 
 import React from 'react'
-import MainColab from '../../../Components/MainColab'
+import MainColab from '../../../../Components/MainColab'
 
 
 function page() {

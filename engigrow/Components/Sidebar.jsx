@@ -1,3 +1,5 @@
+"use client";
+import { Navigation } from 'lucide-react';
 import React from 'react';
 
 function SideBar() {
@@ -12,12 +14,15 @@ function SideBar() {
         />
         <h2 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">Muragesh</h2>
         <p className="text-sm text-gray-500 dark:text-gray-400">Developer & Founder</p>
-        <button className="mt-3 px-4 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        <button
+          className="mt-3 px-4 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          onClick={() => window.location.href = '/dashboard/profile'}
+        >
           View Full Profile
         </button>
       </div>
 
-      {/* Divider */}
+     
       <hr className="border-gray-300 dark:border-gray-700 mb-4" />
 
       {/* Notifications Section */}
@@ -51,7 +56,7 @@ function SideBar() {
           </li>
         </ul>
 
-        <button className="mt-4 w-full text-sm text-blue-600 dark:text-blue-400 hover:underline">
+        <button className="mt-4 w-full text-sm text-blue-600 dark:text-blue-400 hover:underline" onClick={() => window.location.href = '/dashboard/viewed'}>
           See all views
         </button>
       </div>
