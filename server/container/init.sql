@@ -1,0 +1,3 @@
+CREATE ROLE adminEngigrow WITH LOGIN PASSWORD 'b2Led2ke';
+CREATE DATABASE engigrow;
+GRANT ALL PRIVILEGES ON DATABASE engigrow TO adminEngigrow;

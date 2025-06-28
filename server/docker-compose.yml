@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: container/Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+    command: ["/app/wait-for-db.sh"]
+
+  db:
+    image: postgres:15
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: adminEngigrow
+      POSTGRES_PASSWORD: b2Led2ke
+    volumes:
+      - ./container/init.sql:/docker-entrypoint-initdb.d/init.sql
