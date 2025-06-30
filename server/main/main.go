@@ -13,7 +13,7 @@ func main() {
     fmt.Println("🚀 Starting Engigrow Server...")
 
     r := gin.Default()
-    r.GET("/", func(c *gin.Context) {
+    r.GET("/engigrow/setup", func(c *gin.Context) {
         c.JSON(200, gin.H{"status": "ok"})
     })
 
