@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("🟡 Main.go started")
+
     scripts.ConnectToDatabase()
     scripts.DbAutomigrate()
     fmt.Println("🚀 Starting Engigrow Server...")
